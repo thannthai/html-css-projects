@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  position: relative;
+  background: url('background.jpg') right no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar-menu {
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  left: -280px;
+  transition: all 0.15s linear;
+}
+
+.sidebar-menu .home {
+  position: absolute;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  height: 60px;
+  width: 100%;
+  color: white;
+}
+
+.sidebar-menu .home a {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  line-height: 60px;
+  font-weight: 500;
+  padding-left: 50px;
+}
+
+.sidebar-menu .menu {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+.sidebar-menu .menu li {
+  margin-top: 6px;
+  padding: 10px 20px;
+  transition: all 0.2s linear;
+}
+
+.sidebar-menu .menu i {
+  padding-right: 8px;
+}
+
+.sidebar-menu .menu a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sidebar-menu .menu li:hover {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-menu .social-media {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50px)
+}
+
+.social-media i {
+  padding: 0 5px;
+  font-size: 20px;
+  color: white;
+  opacity: 0.6;
+  transition: all 0.2s linear;
+}
+
+.social-media i:hover {
+  opacity: 1;
+}
+
+#check {
+  display: none
+}
+
+.btn-one i {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  opacity: 1;
+  transition: all 0.1s linear;
+  cursor: pointer
+}
+
+#check:checked ~.sidebar-menu {
+  transform: translateX(280px);
+}
+
+#check:checked ~.btn-one i {
+  opacity: 0;
+}
+
+.btn-two i {
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  line-height: 60px;
+  color: white
+}
+
