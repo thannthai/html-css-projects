@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgb(218, 217, 217);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  background-image: linear-gradient(0deg, #fd9bb0 10%, #F6416C 100%);
+  clip-path: circle(55% at right 35%);
+}
+
+.container {
+  display: flex;
+  width: 45%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 13px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding-bottom: 55px
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #fd9bb0 10%, #F6416C 100%);
+  clip-path: circle(63% at right 35%);
+}
+
+.left-side {
+  padding: 40px 0 0 35px;
+  width: 70%
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+p {
+  font-size: 15px;
+  color: rgb(135, 134, 134);
+  margin-bottom: 10px;
+}
+
+.rating i {
+  color: rgb(248, 124, 143)
+}
+
+.original-price {
+  margin-top: 20px;
+  font-size: 20px;
+  padding-left: 15px;
+  color: rgb(135, 134, 134);
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.original-price::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  width: 100px;
+  height: 1px;
+  background-color: rgb(135, 134, 134);
+}
+
+.discount {
+  font-size: 30px;
+  color: rgb(248, 124, 143)
+}
+
+.button1 {
+  margin-top: 55px;
+}
+
+.button1 button {
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 17px;
+  background-color: #03e1e1;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+.button1 button:hover {
+  transform: scale(0.98)
+}
+
+.right-side {
+  width: 100%;
+  text-align: right;
+  padding-right: 40px;
+  position: relative;
+}
+
+.image {
+  margin-bottom: 5px;
+}
+
+.image img {
+  width: 430px;
+  height: 340px;
+  object-fit: cover;
+  position: absolute;
+  top: -30px;
+  left: 10px
+}
+
+.brand {
+  margin-top: 340px;
+  font-size: 18px;
+  color: rgb(212, 0, 0);
+  font-weight: 600;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: 500;
+  color: white
+}
+
+.button2 button {
+  padding: 5px 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+
