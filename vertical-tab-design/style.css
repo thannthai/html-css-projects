@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D5D1E9
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 50px 30px 30px 45px;
+}
+
+.container .title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.container input[type="radio"] {
+  display: none;
+}
+
+.container .body-container .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  position: relative;
+}
+
+.body-container .list label {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.list label:hover {
+  color:#6d50e2
+}
+
+/*#id:checked có độ ưu tiên cao hơn hover nên khi hover vào checked sẽ không bị thay đổi*/
+#home:checked ~ .list .home,
+#blog:checked ~ .list .blog,
+#help:checked ~ .list .help,
+#code:checked ~ .list .code,
+#about:checked ~ .list .about {
+  color: white;
+}
+
+/*dùng dấu ~ để chọn phần tử cùng cấp mà không phải phần tử con*/
+#home:checked ~ .list .indicator {
+  top: 0;
+}
+
+#blog:checked ~ .list .indicator {
+  top: 70px;
+}
+
+#help:checked ~ .list .indicator {
+  top: 140px;
+}
+
+#code:checked ~ .list .indicator {
+  top: 210px;
+}
+
+#about:checked ~ .list .indicator {
+  top: 280px;
+}
+
+label i {
+  margin-right: 5px
+}
+
+.container .indicator {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #6d50e2;
+  transition: all 0.3s ease;
+}
+
+.body-container {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+
+.body-container .content {
+  width: 80%;
+  margin-left: 40px;
+  padding-right: 20px
+}
+
+.content .home-content .text-title,
+.content .blog-content .text-title,
+.content .help-content .text-title,
+.content .code-content .text-title,
+.content .about-content .text-title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.content .home-content p,
+.content .blog-content p,
+.content .help-content p,
+.content .code-content p,
+.content .about-content p {
+  font-size: 17px;
+  text-align: justify;
+}
+
+.content .home-content,
+.content .blog-content,
+.content .help-content,
+.content .code-content,
+.content .about-content {
+  display: none;
+}
+
+#home:checked ~ .content .home-content {
+  display: block;
+}
+
+#blog:checked ~ .content .blog-content {
+  display: block;
+}
+
+#help:checked ~ .content .help-content {
+  display: block;
+}
+
+#code:checked ~ .content .code-content {
+  display: block;
+}
+
+#about:checked ~ .content .about-content {
+  display: block;
+}
